@@ -63,6 +63,7 @@ test_return_t check_for_1_2_3(memcached_st *memc);
 test_return_t clone_test(memcached_st *memc);
 test_return_t connection_test(memcached_st *memc);
 test_return_t crc_run (memcached_st *);
+test_return_t asis_run (memcached_st *);
 test_return_t decrement_by_key_test(memcached_st *memc);
 test_return_t decrement_test(memcached_st *memc);
 test_return_t decrement_with_initial_by_key_test(memcached_st *memc);

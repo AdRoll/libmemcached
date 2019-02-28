@@ -93,7 +93,7 @@ environments).
 
 .. c:type:: MEMCACHED_BEHAVIOR_HASH
 
-Makes the default hashing algorithm for keys use MD5. The value can be set to either :c:type:`MEMCACHED_HASH_DEFAULT`, :c:type:`MEMCACHED_HASH_MD5`, :c:type:`MEMCACHED_HASH_CRC`, :c:type:`MEMCACHED_HASH_FNV1_64`, :c:type:`MEMCACHED_HASH_FNV1A_64`, :c:type:`MEMCACHED_HASH_FNV1_32`, :c:type:`MEMCACHED_HASH_FNV1A_32`, :c:type:`MEMCACHED_HASH_JENKINS`, :c:type:`MEMCACHED_HASH_HSIEH`, and :c:type:`MEMCACHED_HASH_MURMUR`.  
+Makes the default hashing algorithm for keys use MD5. The value can be set to either :c:type:`MEMCACHED_HASH_DEFAULT`, :c:type:`MEMCACHED_HASH_MD5`, :c:type:`MEMCACHED_HASH_CRC`, :c:type:`MEMCACHED_HASH_FNV1_64`, :c:type:`MEMCACHED_HASH_FNV1A_64`, :c:type:`MEMCACHED_HASH_FNV1_32`, :c:type:`MEMCACHED_HASH_FNV1A_32`, :c:type:`MEMCACHED_HASH_JENKINS`, :c:type:`MEMCACHED_HASH_HSIEH`, :c:type:`MEMCACHED_HASH_MURMUR`, and :c:type:`MEMCACHED_HASH_ASIS`.
 
 Each hash has it's advantages and it's weaknesses. If you don't know or don't 
 care, just go with the default.

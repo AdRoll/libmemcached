@@ -318,6 +318,19 @@ static test_return_t jenkins_run (hashkit_st *)
   return TEST_SUCCESS;
 }
 
+static test_return_t asis_run (hashkit_st *)
+{
+  uint32_t x;
+  const char **ptr;
+
+  for (ptr= list_to_hash, x= 0; *ptr; ptr++, x++)
+  {
+    test_compare(asis_values[x],
+                 libhashkit_asis(*ptr, strlen(*ptr)));
+  }
+
+  return TEST_SUCCESS;
+}
 
 
 
@@ -531,7 +544,8 @@ test_st hash_tests[] ={
   {"hsieh", 0, (test_callback_fn*)hsieh_run },
   {"murmur", 0, (test_callback_fn*)murmur_run },
   {"murmur3", 0, (test_callback_fn*)murmur3_TEST },
-  {"jenkis", 0, (test_callback_fn*)jenkins_run },
+  {"jenkins", 0, (test_callback_fn*)jenkins_run },
+  {"asis", 0, (test_callback_fn*)asis_run },
   {0, 0, (test_callback_fn*)0}
 };
 

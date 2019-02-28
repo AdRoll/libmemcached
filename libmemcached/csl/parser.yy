@@ -166,6 +166,7 @@ inline void __config_error(Context *context, yyscan_t *scanner, const char *erro
 %token HSIEH
 %token MURMUR
 %token JENKINS
+%token ASIS
 
 /* Distributions */
 %token CONSISTENT
@@ -505,6 +506,10 @@ hash:
         | JENKINS
           {
             $$= MEMCACHED_HASH_JENKINS;
+          }
+        | ASIS
+          {
+            $$= MEMCACHED_HASH_ASIS;
           }
         ;
 

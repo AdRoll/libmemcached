@@ -193,6 +193,7 @@ FNV1A_32			{ return FNV1A_32; }
 HSIEH			{ return HSIEH; }
 MURMUR			{ return MURMUR; }
 JENKINS			{ return JENKINS; }
+ASIS			{ return ASIS; }
 
 (([[:digit:]]{1,3}"."){3}([[:digit:]]{1,3})) {
       yyextra->hostname(yytext, yyleng, yylval->server);
