@@ -3293,6 +3293,27 @@ test_return_t enable_consistent_hsieh(memcached_st *memc)
   return TEST_SUCCESS;
 }
 
+test_return_t enable_jch_asis(memcached_st *memc)
+{
+  test_compare(MEMCACHED_SUCCESS, memcached_behavior_set(memc, MEMCACHED_BEHAVIOR_DISTRIBUTION, MEMCACHED_DISTRIBUTION_JCH));
+  test_compare(memcached_behavior_get(memc, MEMCACHED_BEHAVIOR_DISTRIBUTION),  uint64_t(MEMCACHED_DISTRIBUTION_JCH));
+
+  test_return_t rc;
+  if ((rc= pre_asis(memc)) != TEST_SUCCESS)
+  {
+    return rc;
+  }
+
+  test_compare(memcached_behavior_get(memc, MEMCACHED_BEHAVIOR_DISTRIBUTION),  uint64_t(MEMCACHED_DISTRIBUTION_JCH));
+
+  if (memcached_behavior_get(memc, MEMCACHED_BEHAVIOR_HASH) != MEMCACHED_HASH_ASIS)
+  {
+    return TEST_SKIPPED;
+  }
+
+  return TEST_SUCCESS;
+}
+
 test_return_t enable_cas(memcached_st *memc)
 {
   if (libmemcached_util_version_check(memc, 1, 2, 4))

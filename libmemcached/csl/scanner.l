@@ -182,6 +182,7 @@ FALSE           { return yyextra->previous_token= CSL_FALSE; }
 
 CONSISTENT      { return CONSISTENT; }
 MODULA          { return MODULA; }
+JCH             { return JCH; }
 RANDOM          { return RANDOM; }
 
 MD5			{ return MD5; }

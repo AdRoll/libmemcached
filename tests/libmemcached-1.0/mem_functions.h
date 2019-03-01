@@ -74,6 +74,7 @@ test_return_t deprecated_set_memory_alloc(memcached_st *memc);
 test_return_t enable_cas(memcached_st *memc);
 test_return_t enable_consistent_crc(memcached_st *memc);
 test_return_t enable_consistent_hsieh(memcached_st *memc);
+test_return_t enable_jch_asis(memcached_st *memc);
 test_return_t flush_test(memcached_st *memc);
 test_return_t fnv1_32_run (memcached_st *);
 test_return_t fnv1_64_run (memcached_st *);

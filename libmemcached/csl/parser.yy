@@ -172,6 +172,7 @@ inline void __config_error(Context *context, yyscan_t *scanner, const char *erro
 %token CONSISTENT
 %token MODULA
 %token RANDOM
+%token JCH
 
 /* Boolean values */
 %token <boolean> CSL_TRUE
@@ -528,6 +529,10 @@ distribution:
           CONSISTENT
           {
             $$= MEMCACHED_DISTRIBUTION_CONSISTENT;
+          }
+        | JCH
+          {
+            $$= MEMCACHED_DISTRIBUTION_JCH;
           }
         | MODULA
           {

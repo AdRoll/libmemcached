@@ -476,6 +476,7 @@ collection_st collection[] ={
   {"gets", (test_callback_fn*)enable_cas, 0, tests},
   {"consistent_crc", (test_callback_fn*)enable_consistent_crc, 0, tests},
   {"consistent_hsieh", (test_callback_fn*)enable_consistent_hsieh, 0, tests},
+  {"jch_asis", (test_callback_fn*)enable_jch_asis, 0, tests},
 #ifdef MEMCACHED_ENABLE_DEPRECATED
   {"deprecated_memory_allocators", (test_callback_fn*)deprecated_set_memory_alloc, 0, tests},
 #endif

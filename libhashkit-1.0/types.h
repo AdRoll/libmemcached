@@ -82,6 +82,7 @@ typedef enum
   HASHKIT_DISTRIBUTION_MODULA,
   HASHKIT_DISTRIBUTION_RANDOM,
   HASHKIT_DISTRIBUTION_KETAMA,
+  HASHKIT_DISTRIBUTION_JCH,
   HASHKIT_DISTRIBUTION_MAX /* Always add new values before this. */
 } hashkit_distribution_t;
 
